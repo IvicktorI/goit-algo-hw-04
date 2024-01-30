@@ -1,6 +1,6 @@
-import pathlib
+import pathlib, re
 
-path='salary.txt'
+path='salry.txt'
 
 def total_salary(path):
 
@@ -12,5 +12,13 @@ def total_salary(path):
     except Exception as e:
         return (f"Error: {e}")
     
+    salary=[]
+    for i in employees:
+        salary.append(float(re.search(r'\d+',i).group()))
 
-total_salary(path)
+    try:
+        return  (sum(salary),sum(salary)/len(salary))
+    except Exception:
+        return 'File is empty'
+    
+print(total_salary(path))
