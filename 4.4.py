@@ -20,7 +20,6 @@ def phone(args,contacts):
 def show_all(contacts):
     from prettytable import PrettyTable
 
-    # Пример данных
     table = PrettyTable()
     table.field_names = ["Name", "Phone"]
     for key in contacts:
