@@ -20,5 +20,4 @@ def total_salary(path):
     except Exception:
         return 'File is empty'
     
-    
 print(total_salary(path))
